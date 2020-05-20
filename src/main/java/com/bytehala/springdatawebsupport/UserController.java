@@ -26,4 +26,9 @@ public class UserController {
                                    @RequestParam("size") int size, Pageable pageable) {
         return userRepository.findAll(pageable);
     }
+
+    @GetMapping("/sortedusers")
+    public Page<User> findAllUsersSortedByName(@RequestParam("sort") String sort, Pageable pageable) {
+        return userRepository.findAll(pageable);
+    }
 }

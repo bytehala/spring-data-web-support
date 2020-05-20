@@ -20,3 +20,6 @@ PageableHandlerMethodArgumentResolver
      return userRepository.findAll(pageable);
  }
 ```
+
+SortHandlerMethodArgumentResolver
+ - also inserts the `sort` parameter into the pageable
